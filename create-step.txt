@@ -1,13 +1,23 @@
 🛑 Start
-mkdir back
-cd back
-npm init -y 
-tsc --init
-npm i express cors dotenv drizzle-orm drizzle-kit drizzle-zod pg
-npm i -D @types/cors @types/express @typrs/node @types/pg ts-node tsx typescript nodemon
+1️⃣ back :
+    mkdir back
+    cd back
+    npm init -y 
+    tsc --init
+    npm i express cors dotenv drizzle-orm drizzle-kit drizzle-zod pg
+    npm i -D @types/cors @types/express @typrs/node @types/pg ts-node tsx typescript nodemon
 
-migration : وظیفش اینه که مقادیری که در اسکیما ها درست میشن رو در دیتابیس درست کنه ، مثلا جداول 
+    migration : وظیفش اینه که مقادیری که در اسکیما ها درست میشن رو در دیتابیس درست کنه ، مثلا جداول 
 
-"generate": "drizzle-kit generate" : هستند که تغییرات مورد نیاز در پایگاه داده (مانند ایجاد جدول، افزودن ستون، یا تغییر ایندکس‌ها) را تعریف می‌کنند sql , ts/js تولید شده شامل دستورات migration در مسیری که گفته اید ، معمولا فایل های schema بر اساس  migration ساخت فایل
-"migrate":"tsx -r dotenv/config src/db/migrate.ts" : رو میخونه و  تغییرات رو روی پایگاه داده اعمال می‌کنه migration فایل های
-"studio":"drizzle-kit studio" : ما نشان میدهد DB یک نمای گرافیکی از
+    "generate": "drizzle-kit generate" : هستند که تغییرات مورد نیاز در پایگاه داده (مانند ایجاد جدول، افزودن ستون، یا تغییر ایندکس‌ها) را تعریف می‌کنند sql , ts/js تولید شده شامل دستورات migration در مسیری که گفته اید ، معمولا فایل های schema بر اساس  migration ساخت فایل
+    "migrate":"tsx -r dotenv/config src/db/migrate.ts" : رو میخونه و  تغییرات رو روی پایگاه داده اعمال می‌کنه migration فایل های
+    "studio":"drizzle-kit studio" : ما نشان میدهد DB یک نمای گرافیکی از
+
+2️⃣ front
+    use vite for bundler -> npm create vite@latest
+    
+    add tailwindcss for vite -> npm install tailwindcss @tailwindcss/vite
+    config tailwindcss
+
+    add daisyui -> npm i -D daisyui@latest
+    config daisyui
