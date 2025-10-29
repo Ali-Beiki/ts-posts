@@ -4,6 +4,7 @@ const Header: FC = () => {
     const onchangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
     };
+    
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">

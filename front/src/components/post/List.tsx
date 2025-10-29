@@ -1,9 +1,12 @@
-import React from 'react';
+import { type FC } from "react";
+import PostItem from "./Item";
 
-function List(){
+const List: FC = () => {
     return (
-        <div>List</div>
-    )
-}
+        <div className="flex flex-col gap-3 mt-5">
+            <PostItem />
+        </div>
+    );
+};
 
-export default List
+export default List;

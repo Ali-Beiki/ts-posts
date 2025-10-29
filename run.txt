@@ -1,0 +1,6 @@
+1️⃣ - Run Api and DB Services
+cd back & docker copmose up
+cd back & npm Start
+
+
+cd front & npm run dev
