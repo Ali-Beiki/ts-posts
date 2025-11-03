@@ -9,10 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:css": "npx @tailwindcss/cli -i app.css -o public/output.css"
-
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
+    "axios": "^1.13.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.13"

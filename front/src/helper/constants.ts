@@ -5,8 +5,12 @@ export const PostTypeAction = {
     SET_POST: "SET_POST",
     SET_POSTS: "SET_POSTS",
     GET_POSTS: "GET_POSTS",
-
 } as const;
 
 export type PostTypeAction =
     (typeof PostTypeAction)[keyof typeof PostTypeAction];
+
+export const InitialPostState: PostState = {
+    selectedPost: {id:"",title:"",content:""},
+    posts: [{id:"1",title:"test title",content:"test content"}],
+};

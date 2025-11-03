@@ -1,23 +1,25 @@
-import React from "react";
+import React, { type FC } from "react";
 
-function Item() {
-    const editClickEdit = () => {
-        console.log("Edit Item");
+const Item: FC<Post> = (post) => {
+    const { id, title, content } = post;
+
+    const editClickEdit = (post:Post) => {
+        console.log("Edit Item" ,post);
     };
 
-    const editClickDelete = () => {
-        console.log("Delete Item");
+    const editClickDelete = (id:string) => {
+        console.log("Delete Item",id);
     };
     return (
         <div>
             <div className="card card-compact bg-neutral text-neutral-content w-full">
                 <div className="card-body ">
                     <div className="card-title flex justify-between items-center">
-                        <h2>title</h2>
+                        <h2>{title}</h2>
                         <div className="flex item-center gap-2">
                             <button
                                 className="btn btn-circle btn-outline btn-sm"
-                                onClick={editClickEdit}
+                                onClick={() => editClickEdit(post)}
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +36,7 @@ function Item() {
 
                             <button
                                 className="btn btn-circle btn-outline btn-sm"
-                                onClick={editClickDelete}
+                                onClick={() => editClickDelete(id)}
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -51,16 +53,11 @@ function Item() {
                             </button>
                         </div>
                     </div>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Eos dolores reiciendis ut, rem aut eum veritatis
-                        eveniet et natus dolore illum provident odit voluptatum
-                        facilis fuga iste saepe molestias quibusdam.
-                    </p>
+                    <p>{content}</p>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Item;
